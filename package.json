@@ -40,6 +40,9 @@
         "lib": "lib",
         "test": "test"
     },
-    "heroku": "NODE_ENV=production node index",
+    "scripts": {
+        "test": "istanbul cover _mocha",
+        "start": "cross-env NODE_ENV=production pm2 start index.js --name 'myblog'"
+    },
     "description": ""
 }
